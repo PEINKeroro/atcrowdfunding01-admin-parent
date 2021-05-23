@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><!-- 约束文件-->
+<mapper namespace="com.atbj.crowd.mapper.TwoMapper">
+
+    <select id="selectProvinceAll" resultType="com.atbj.crowd.vo.Province">
+        select id, name from two_province
+    </select>
+
+    <select id="selectCityByProId" resultType="com.atbj.crowd.vo.Province">
+        select id, name from two_city where provinceid = #{pid}
+    </select>
+
+
+<!--    <insert id="insert???">-->
+<!--        insert into t_user values(#{id},#{username},#{password},#{sex})-->
+<!--    </insert>-->
+
+<!--    <update id="update???">-->
+<!--        update-->
+<!--    </update>-->
+</mapper>
